@@ -1,0 +1,115 @@
+	body {
+	    font-family: Arial, Helvetica, sans-serif;
+	}
+	
+	.login-cover {
+	    background-color: white;
+	    position: fixed;
+	    width: 100%;
+	    height: 100vh;
+	    z-index: 800;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+	
+	.pg-loader {}
+	
+	.ldng {
+	    display: none;
+	}
+	
+	.signdail {
+	    max-width: 780px;
+	    width: 100%;
+	    border-radius: 10px;
+	}
+	
+	.uploaded_coupons,
+	.upload_coupons {
+	    padding-top: 3%;
+	    padding-bottom: 3%;
+	}
+	
+	.uploaded_coupons h1,
+	.upload_coupons h1 {
+	    text-align: center;
+	    padding-top: 2%;
+	    padding-bottom: 2%;
+	}
+	
+	.tblbny {
+	    padding-top: 20px;
+	    margin: 0 70px 50px 70px;
+	}
+	
+	.delbny:hover {
+	    color: #00FF00;
+	}
+	
+	.form-design {
+	    max-width: 540px;
+	    width: 100%;
+	    border-radius: 10px;
+	    margin: 0 auto;
+	    padding-bottom: 10%;
+	}
+	
+	#home-slider-show {
+	    padding-top: 10px;
+	    margin: 70px 70px 50px 70px;
+	}
+	
+	#contact-show {
+	    margin: 70px 70px 50px 70px;
+	}
+	/* ************************************************************* */
+	/* ************************************************************* */
+	/* ************************************************************* */
+	
+	input[type=text],
+	input[type=password] {
+	    max-width: 100%;
+	    padding: 12px 20px;
+	    margin: 8px 0;
+	    display: flex;
+	    border: 1px solid #ccc;
+	    box-sizing: border-box;
+	    border-radius: 5px;
+	}
+	
+	button {
+	    background-color: #04AA6D;
+	    color: white;
+	    padding: 14px 20px;
+	    margin: 8px 0;
+	    border: none;
+	    cursor: pointer;
+	    width: 100%;
+	    border-radius: 5px;
+	}
+	
+	button:hover {
+	    opacity: 0.8;
+	}
+	
+	.imgcontainer {
+	    text-align: center;
+	    margin: 24px 0 12px 0;
+	    position: relative;
+	}
+	
+	img.avatar {
+	    width: 60%;
+	    border-radius: 50%;
+	}
+	
+	span.psw {
+	    float: right;
+	    padding-top: 16px;
+	}
+	
+	.progress {
+	    background-color: white;
+	    width: 100%;
+	}

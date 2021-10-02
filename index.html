@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OFAOFA </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- login Form -->
+
+    <dialog id="signdail" class="mdl-dialog signdail">
+        <h2 class="mdl-dialog__title">Modal Login Form</h2>
+        <div class="mdl-dialog__content">
+            <form action="#">
+                <div class="imgcontainer">
+                    <img src="Logo_app.png" alt="Avatar" class="avatar">
+                </div>
+                <label for="user"><b>Username</b></label>
+                <input id="email_field1" class="mdl-textfield__input" type="text" placeholder="Enter Email" name="user" pattern="[a-z,@,.,0-9, ]*" required>
+                <label for="password"><b>Password</b></label>
+                <input id="password_field1" class="mdl-textfield__input" type="password" placeholder="Enter Password" name="password" required>
+                <button type="button" class="button" onclick="login()">login</button>
+                <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate ldng"></div>
+            </form>
+        </div>
+    </dialog>
+
+    <div class="login-cover">
+        <!-- MDL Spinner Component -->
+        <div class="pg-loader mdl-spinner mdl-js-spinner is-active"></div>
+    </div>
+
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">
+          OFA OFA APP
+        </span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <!-- Colored raised button -->
+                    <button class="signout mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="logout()">
+            Sign out <span class="logout-icon material-icons">
+              account_circle
+            </span>
+          </button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <div class="uploaded_coupons">
+                    <h1>Uploaded Coupons</h1>
+                    <div class="tblbny ">
+                        <table class="table mdl-data-table mdl-js-data-table  
+                    mdl-shadow--2dp">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Title</th>
+                                    <th>ValidTill</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="main-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="upload_coupons">
+                    <h1> Upload new Coupon</h1>
+                    <form class="form-design" action="#">
+
+                        <input class="mdl-textfield__input" placeholder="Enter Title" type="text" id="coupon_title" required>
+                        <input class="mdl-textfield__input" placeholder="Enter Uniqe Id" type="text" id="coupon_id" required>
+                        <input class="mdl-textfield__input" placeholder="Enter Location" type="text" id="coupon_location" required>
+                        <input class="mdl-textfield__input" placeholder="Enter Title For the Ad" type="text" id="coupon_story_title" required>
+                        <input class="mdl-textfield__input" placeholder="Enter Description for the Ad" type="text" id="coupon_story_description" required>
+                        <input class="mdl-textfield__input" placeholder="Enter Date for the Ad" type="text" id="coupon_valid" required>
+
+                        <p> Upload Coupon Image
+                            <p>
+                                <input type="file" id="files" accept="image/*" /><br /><br />
+                                <progress value="0" max="100" id="progress"></progress>
+                                <button class="btn btn-success" type="submit" id="send">Upload <i class="material-icons">cloud_upload</i></button>
+
+                                <p id="uploading"></p>
+
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+    <script src="database.js"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
